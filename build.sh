@@ -28,6 +28,7 @@ then
 else
 	echo "USING EXISTING BUILDROOT CONFIG"
 	echo "To force update, delete .config or make changes using make menuconfig and build again."
+	#make -C buildroot BR2_EXTERNAL=${EXTERNAL_REL_BUILDROOT} AESD_ASSIGNMENTS_OVERRIDE_SRCDIR=$(readlink -f ~/coursera/cu-ecen-aeld/assignments-3-and-later-schmitts) aesd-assignments-rebuild
 	make -C buildroot BR2_EXTERNAL=${EXTERNAL_REL_BUILDROOT}
 
 fi
